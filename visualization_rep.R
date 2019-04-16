@@ -89,11 +89,15 @@ abline(v=c_kishore6,col="blue",lty=4,lwd=2)
 santos_howard_1<-1006
 santos_howard_2<-1139
 santos_howard_3<-1272
+santos_howard_4<-1011
+santos_howard_5<-1157
 
 # Now we calculate the counterfactual
-c_santos_howard_1<-11459-1006
-c_santos_howard_2<-11459-1139
-c_santos_howard_3<-11459-1272
+c_santos_howard_1<-11459-santos_howard_1
+c_santos_howard_2<-11459-santos_howard_2
+c_santos_howard_3<-11459-santos_howard_3
+c_santos_howard_4<-11459-santos_howard_4
+c_santos_howard_5<-11459-santos_howard_5
 
 #We put a fresh plot
 #Here, we adjust the plot parameters 
@@ -114,7 +118,10 @@ area
 #Now we plot the counterfactual over the distribution
 abline(v=c_santos_howard_1,col="red",lty=2,lwd=2)
 abline(v=c_santos_howard_2,col="red",lwd=2)  
-abline(v=c_santos_howard_3,col="red",lty=4,lwd=2) 
+abline(v=c_santos_howard_3,col="red",lty=2,lwd=2) 
+abline(v=c_santos_howard_3,col="red",lty=2,lwd=2)
+abline(v=c_santos_howard_4,col="blue",lwd=2)
+abline(v=c_santos_howard_5,col="darkgreen",lwd=2)
 
 # GWU Counterfactuals
 # GWU Census Model
@@ -166,7 +173,7 @@ par(mfrow=c(2,2))
 #Put graphs together
 #Here, we input the plot parameters, title, and axist comment
 plot(x,hx,xlim=c(lb-1000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
-     main="Distribution of Deaths in Puerto Rico based on 2000-2016 patterns")
+     main="A. Distribution of Deaths in Puerto Rico based on 2000-2016 patterns")
 
 #Line for the distribution
 lines(x,hx)
@@ -176,7 +183,7 @@ polygon(c(lb,x[i],ub),c(0,hx[i],0),col="grey89")
 
 # Kishore et al
 plot(x,hx,xlim=c(lb-8000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
-     main="Counterfactuals by Kishore et al. (2018)")
+     main="B. Counterfactuals by Kishore et al. (2018)")
 
 #Line for the distribution
 lines(x,hx)
@@ -190,13 +197,12 @@ abline(v=c_kishore4,col="blue",lty=2,lwd=2)
 abline(v=c_kishore5,col="blue",lwd=2) 
 abline(v=c_kishore6,col="blue",lty=2,lwd=2) 
 
-
 legend(2900,1.015158e-03,legend=c("Unasjusted", "Adjusted", "95% CI: Unasjusted", "95% CI: Adjusted"),
        col=c("red", "blue","red","blue"),bg="transparent", box.lty=0,lty=c(1,1,2,2), cex=0.8)
 
 # Santos and Howard
 plot(x,hx,xlim=c(lb-1000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
-     main="Counterfactual by Santos & Howard (2018)")
+     main="C. Counterfactual by Santos-Lozada and Howard (2018, 2019)")
 
 #Line for the distribution
 lines(x,hx)
@@ -209,13 +215,16 @@ polygon(c(lb,x[i],ub),c(0,hx[i],0),col="grey89")
 abline(v=c_santos_howard_1,col="red",lty=2,lwd=2)
 abline(v=c_santos_howard_2,col="red",lwd=2)  
 abline(v=c_santos_howard_3,col="red",lty=2,lwd=2) 
+abline(v=c_santos_howard_3,col="red",lty=2,lwd=2)
+abline(v=c_santos_howard_4,col="blue",lwd=2)
+abline(v=c_santos_howard_5,col="darkgreen",lwd=2)
 
-legend(8000,1.015158e-03,legend=c("Epidemiologic Threshold Method", "95% CI: Coverage Error "),
-       col=c("red", "red"),bg="transparent", box.lty=0,lty=c(1,2), cex=0.8)
+legend(8000,1.015158e-03,legend=c("Epidemiologic Threshold Method", "95% CI: Coverage Error","Regression 1","Regression 2"),
+       col=c("red", "red","blue","darkgreen"),bg="transparent", box.lty=0,lty=c(1,2,1,1), cex=0.8)
 
 # Santos-Burgoa et al. 
 plot(x,hx,xlim=c(lb-1000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
-     main="Counterfactual by Santos-Burgoa et. al. (2018)")
+     main="D. Counterfactual by Santos-Burgoa et. al. (2018)")
 
 lines(x,hx)
 
