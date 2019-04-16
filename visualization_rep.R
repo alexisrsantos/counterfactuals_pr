@@ -4,6 +4,9 @@ data <- read_excel("FILE")
 # We calculate average deaths for the 2000-2016
 # Then, I calculate the standard deviations
 data2<-subset(data,year<2017)
+
+# Use the following line to limit the analysis to 2010-2016
+# Just remove the number sign
 #data2<-subset(data2,year>2009)
 
 rm(data)
