@@ -92,6 +92,8 @@ abline(v=c_kishore6,col="blue",lty=4,lwd=2)
 santos_howard_1<-1006
 santos_howard_2<-1139
 santos_howard_3<-1272
+
+#These two are from Santos-Lozada and Howard (2019)
 santos_howard_4<-1011
 santos_howard_5<-1157
 
@@ -99,6 +101,8 @@ santos_howard_5<-1157
 c_santos_howard_1<-11459-santos_howard_1
 c_santos_howard_2<-11459-santos_howard_2
 c_santos_howard_3<-11459-santos_howard_3
+
+#These two are from Santos-Lozada and Howard (2019)
 c_santos_howard_4<-11459-santos_howard_4
 c_santos_howard_5<-11459-santos_howard_5
 
@@ -123,8 +127,8 @@ abline(v=c_santos_howard_1,col="red",lty=2,lwd=2)
 abline(v=c_santos_howard_2,col="red",lwd=2)  
 abline(v=c_santos_howard_3,col="red",lty=2,lwd=2) 
 abline(v=c_santos_howard_3,col="red",lty=2,lwd=2)
-abline(v=c_santos_howard_4,col="blue",lwd=2)
-abline(v=c_santos_howard_5,col="darkgreen",lwd=2)
+abline(v=c_santos_howard_4,col="blue",lwd=2) #Reply letter
+abline(v=c_santos_howard_5,col="darkgreen",lwd=2) #Reply letter
 
 # GWU Counterfactuals
 # GWU Census Model
@@ -205,7 +209,7 @@ legend(2900,1.015158e-03,legend=c("Unasjusted", "Adjusted", "95% CI: Unasjusted"
 
 # Santos and Howard
 plot(x,hx,xlim=c(lb-1000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
-     main="C. Counterfactual by Santos-Lozada and Howard (2018, 2019)")
+     main="C. Counterfactuals by Santos-Lozada and Howard (2018, 2019)")
 
 #Line for the distribution
 lines(x,hx)
@@ -227,7 +231,7 @@ legend(8000,1.015158e-03,legend=c("Epidemiologic Threshold Method", "95% CI: Cov
 
 # Santos-Burgoa et al. 
 plot(x,hx,xlim=c(lb-1000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
-     main="D. Counterfactual by Santos-Burgoa et. al. (2018)")
+     main="D. Counterfactuals by Santos-Burgoa et. al. (2018)")
 
 lines(x,hx)
 
