@@ -5,7 +5,7 @@ We share our code for the visualization of counterfactuals scenarios of deaths i
 * Feel free to create a new branch for further incorporation and analysis.
 
 # Data
-The data includes the information required to calculate the historical ranges of variation from deaths occuring between September and December 2000-2016.
+The data includes the information required to calculate the historical ranges of variation from deaths occuring between September and December 2000-2017.
 
 ## Codebook
 * Year = Year of Death Count
