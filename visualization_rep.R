@@ -1,6 +1,8 @@
 #First we read the historical files for Deaths and Population of Puerto Rico
 data <- read_excel("FILE")
 
+library(readxl)
+
 # We calculate average deaths for the 2000-2016
 # Then, I calculate the standard deviations
 data2<-subset(data,year<2017)
@@ -9,7 +11,7 @@ data2<-subset(data,year<2017)
 # Just remove the number sign
 #data2<-subset(data2,year>2009)
 
-rm(data)
+#rm(data)
 
 mean<-mean(data2$sep_dec_deaths)
 
@@ -171,11 +173,39 @@ abline(v=c_Santos_Burgoa4,col="blue",lty=2,lwd=2)
 abline(v=c_Santos_Burgoa5,col="blue",lwd=2)  
 abline(v=c_Santos_Burgoa6,col="blue",lty=4,lwd=2)
 
+###Cruz Cano
+#Now we calculate the counterfactual
+Cruz_Cano1<-707
+Cruz_Cano2<-1205
+Cruz_Cano3<-1702
+
+c_Cruz_Cano1<-11459-Cruz_Cano1
+c_Cruz_Cano2<-11459-Cruz_Cano2
+c_Cruz_Cano3<-11459-Cruz_Cano3
+
+# We get a fresh plot for this counterfactual
+plot(x,hx,xlim=c(lb-1000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
+     main="Counterfactual by Cruz-Cano and Mead (2019)")
+
+lines(x,hx)
+
+i<-x>=lb & x <=ub
+polygon(c(lb,x[i],ub),c(0,hx[i],0),col="grey89")
+
+#Area under the curve
+area <- pnorm(ub, mean, sd) - pnorm(lb, mean, sd)
+area
+
+# Putting the counterfactual
+abline(v=c_Cruz_Cano1,col="red",lty=2,lwd=2)
+abline(v=c_Cruz_Cano2,col="red",lwd=2)  
+abline(v=c_Cruz_Cano3,col="red",lty=4,lwd=2) 
+
 ###################
 ### Final Figure###
 ###################
 
-par(mfrow=c(2,2))
+par(mfrow=c(3,2))
 
 #Put graphs together
 #Here, we input the plot parameters, title, and axist comment
@@ -187,6 +217,18 @@ lines(x,hx)
 
 i<-x>=lb & x <=ub
 polygon(c(lb,x[i],ub),c(0,hx[i],0),col="grey89")
+abline(v=10037,col="red3",lty=2,lwd=2) #2010 period
+abline(v=9847,col="blue",lty=2,lwd=2) #2011 period
+abline(v=9903,col="black",lty=2,lwd=2)  #2012 period
+abline(v=9702,col="orange",lty=2,lwd=2) #2013
+abline(v=10931,col="darkgreen",lty=2,lwd=2) #2014
+abline(v=9438,col="paleturquoise4",lty=2,lwd=2) #2015
+abline(v=10063,col="purple",lty=2,lwd=2) #2016
+
+
+legend(8000,1.015158e-03,legend=c("2010", "2011", "2012", "2013","2014 (Chikungunya)","2015","2016"),
+       col=c("red3", "blue","black","orange","darkgreen","paleturquoise4","purple"),bg="transparent", box.lty=0,lty=c(2,2,2,2,2,2,2), cex=0.8)
+
 
 # Kishore et al
 plot(x,hx,xlim=c(lb-8000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
@@ -248,3 +290,25 @@ abline(v=c_Santos_Burgoa6,col="blue",lty=2,lwd=2)
 
 legend(8000,1.015158e-03,legend=c("Census model", "Displacement model", "95% CI: Census", "95% CI: Displacement"),
        col=c("red", "blue","red","blue"),bg="transparent", box.lty=0,lty=c(1,1,2,2), cex=0.8)
+
+
+# We get a fresh plot for this counterfactual
+plot(x,hx,xlim=c(lb-1000,ub+1000),type="n",xlab="95% Confidence Intervals of the Mean in Gray",ylab="",yaxt='n',
+     main="E. Counterfactual by Cruz-Cano and Mead (2019)")
+
+lines(x,hx)
+
+i<-x>=lb & x <=ub
+polygon(c(lb,x[i],ub),c(0,hx[i],0),col="grey89")
+
+#Area under the curve
+area <- pnorm(ub, mean, sd) - pnorm(lb, mean, sd)
+area
+
+# Putting the counterfactual
+abline(v=c_Cruz_Cano1,col="red",lty=2,lwd=2)
+abline(v=c_Cruz_Cano2,col="red",lwd=2)  
+abline(v=c_Cruz_Cano3,col="red",lty=2,lwd=2) 
+
+legend(8000,1.015158e-03,legend=c("Time-Series Model", "95% CI"),
+       col=c("red", "red"),bg="transparent", box.lty=0,lty=c(1,2), cex=0.8)
