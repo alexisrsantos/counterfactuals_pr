@@ -1,5 +1,5 @@
 # Introduction
-We share our code for the visualization of counterfactuals scenarios of deaths in Puerto Rico following Hurricane Maria
+We share our code for the visualization of counterfactuals scenarios of deaths in Puerto Rico following Hurricane Maria.
 
 # Use
 * Feel free to create a new branch for further incorporation and analysis.
