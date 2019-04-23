@@ -17,7 +17,7 @@ The data includes the information required to calculate the historical ranges of
 We obtain the estimates and 95% confidence intervals around them from five peer-reviewed articles published between 2017 and April 2019. We substract these numbers from the death count for 2017. We then plot these **"what if"** over the historical distribution of deaths to determine whether the counterfactual falls within the historical distribution.
 
 # Santos-Lozada and Howard 95% C.I. for the Estimate
-Due to some questions presented by other researchers we are sharing the document titled **Derivation of our calculations for intervals around excess death estimates** which we satifies the multiple requests we have recieved to justify the narrow ranges around our central estimate of 1139 excess deaths. 
+Due to constant communications presented by another researchers we are sharing the document titled **Derivation of our calculations for intervals around excess death estimates** which we satifies the multiple requests we have recieved to justify the narrow ranges around our central estimate of 1139 excess deaths. 
 
 The file can be accessed here: [Explainer](Santos_Howard_95RangesforEstimate.pdf).
 
