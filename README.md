@@ -26,3 +26,6 @@ For any issues with the functionality of these scripts please create an [issue](
 
 ## License
 The data collected and presented is licensed under the [Creative Commons Attribution 3.0 license](https://creativecommons.org/licenses/by/3.0/us/), and the underlying code used to format, analyze and display that content is licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Metadata
+This repository is maintained by [Dr. Alexis R. Santos](https://scholar.google.com/citations?user=oPZ-RDgAAAAJ&hl=en) and reviewed by [Dr. Jeffrey T. Howard](https://scholar.google.com/citations?user=l0A2z2YAAAAJ&hl=en). 
