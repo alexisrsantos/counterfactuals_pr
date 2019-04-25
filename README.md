@@ -1,7 +1,7 @@
 # Introduction
 We share our code for the visualization of counterfactuals scenarios of deaths in Puerto Rico following Hurricane Maria.
 
-![Figure](Rplot19.png)
+![Figure](Rplot.png)
 
 # Use
 * Feel free to create a new branch for further incorporation and analysis.
@@ -12,7 +12,7 @@ The data includes the information required to calculate the historical ranges of
 ## Codebook
 * Year = Year of Death Count
 * census_pop = Population Estimates by the U.S. Census Bureau (not used)
-* total_deaths = Total deaths by year
+* total_deaths = Total deaths by year (not used)
 * sep_dec_deaths = Deaths during the September - December by year 
 
 # Counterfactuals
