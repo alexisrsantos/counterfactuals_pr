@@ -1,7 +1,7 @@
 # Introduction
 We share our code for the visualization of counterfactuals scenarios of deaths in Puerto Rico following Hurricane Maria.
 
-![Figure](Rplot.png)
+![Figure](Rplot1.png)
 
 # Use
 * Feel free to create a new branch for further incorporation and analysis.
